@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #0a0a0a;
+  color: white;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🔆 Custom overlay for Hero video */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 🌀 Floating animation (for buttons/icons) */
+@keyframes float {
+  0% { transform: translateY(0px) translateX(0px); }
+  50% { transform: translateY(-8px) translateX(8px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ✨ Glassmorphism utility */
+.glass-bg {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* 🌟 Glow effect for elements */
+.glow {
+  box-shadow: 0 0 15px rgba(255, 255, 0, 0.6), 0 0 30px rgba(255, 255, 0, 0.4);
+}
